@@ -62,10 +62,41 @@
 </script>
 <script type="text/x-red" data-template-name="campaign">
     <div class="form-row">
-        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
-        <input type="text" id="node-input-name" placeholder="Name">
+        <label for="node-input-title"><i class="fa fa-info-circle"></i> Title</label>
+	<input type="text" id="node-input-title" placeholder="Title">
+   </div>
+   <div class="form-row">
+     <label for="node-input-status"><i class="fa fa-info-circle"></i> Status</label>
+     <select value: node-input-status, 
+                optionsCaption: 'Choose...', 
+                disable: mode() == 'View'" id="node-input-status" name="status"><option value="">Choose...</option><option value="Ongoing">Ongoing</option><option value="Historic">Historic</option><option value="Future">Future</option></select>
+   </div>
+   <div class="form-row">
+     <label for="description" <i class="fa fa-info-circle"></i> Short Desc.</label>
+     <input class="form-control" name="short_description" id="short_description">
+   </div>
+   <div class="form-row">
+     <label for="description" <i class="fa fa-info-circle"></i> Description</label>
+     <textarea class="form-control" data-bind="value: description, disable: mode() == 'View'" rows="3" name="description" id="description"></textarea>
+   </div>
+   <div class="form-row">
+     <label for="confidence"><i class="fa fa-info-circle"></i> Confidence</label>
+     <select value: confidence, 
+                  optionsCaption: 'Choose...', 
+                  disable: mode() == 'View'" id="confidence" name="confidence"><option value="">Choose...</option><option value="High">High</option><option value="Medium">Medium</option><option value="Low">Low</option><option value="None">None</option><option value="Unknown">Unknown</option></select>
+   </div>
+   <div class="form-row">
+     <label for="status"><i class="fa fa-info-circle"></i> TLP</label>
+     <select optionsCaption: 'Choose...',
+             disable: mode() == 'View'" id="tlp" name="tlp"><option value="">Choose...</option><option value="WHITE">WHITE</option><option value="GREEN">GREEN</option><option value="AMBER">AMBER</option><option value="RED">RED</option></select>
+    </div>
+    <div class="form-row">
+	    <label for="markings"><i class="fa fa-info-circle"></i> Handling Caveats</label>
+      <textarea class="form-control" rows="3" name="markings" id="markings">
+      </textarea>
     </div>
 </script>
+
 <script type="text/x-red" data-template-name="exploit_target">
     <div class="form-row">
         <label for="node-input-name"><i class="icon-tag"></i> Name</label>
@@ -87,7 +118,7 @@
 <script type="text/x-red" data-template-name="indicator">
     <div class="form-row">
         <label for="node-input-name"><i class="icon-tag"></i> Name</label>
-        <input type="text" id="node-input-name" placeholder="Name">
+	<input type="text" id="node-input-name" placeholder="Name">
     </div>
 </script>V
 <script type="text/x-red" data-template-name="course_of_action">

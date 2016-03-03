@@ -1,0 +1,102 @@
+<script type="text/javascript">
+    RED.nodes.registerType('campaign',{
+        category: 'stix',
+        color: '#006191',
+	inputs:0,
+	icon:"campaign.png",
+        outputs:1,
+        label: function() {
+            return this.name||"stix'";
+        }
+    });
+    RED.nodes.registerType('threat_actor',{
+        category: 'stix',
+        color: '#F04F23',
+	inputs:0,
+	icon:"threat_actor.png",
+        outputs:1,
+        label: function() {
+            return this.name||"threat_actor'";
+        }
+    });
+    RED.nodes.registerType('exploit_target',{
+        category: 'stix',
+        color: '#626262',
+	inputs:0,
+	icon:"exploit_target.png",
+        outputs:1,
+        label: function() {
+            return this.name||"exploit_target'";
+        }
+    });
+    RED.nodes.registerType('indicator',{
+        category: 'stix',
+        color: '#F2E631',
+	inputs:0,
+	icon:"indicator.png",
+        outputs:1,
+        label: function() {
+            return this.name||"indicator'";
+        }
+    });
+    RED.nodes.registerType('observable',{
+        category: 'stix',
+        color: '#8DACEA',
+	inputs:0,
+	icon:"observable.png",
+        outputs:1,
+        label: function() {
+            return this.name||"observable'";
+        }
+    });
+    RED.nodes.registerType('course_of_action',{
+        category: 'stix',
+        color: '#2B8100',
+	inputs:0,
+	icon:"course_of_action.png",
+        outputs:1,
+        label: function() {
+            return this.name||"course_of_action'";
+        }
+    });
+</script>
+<script type="text/x-red" data-template-name="campaign">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+<script type="text/x-red" data-template-name="exploit_target">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+<script type="text/x-red" data-template-name="observable">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+<script type="text/x-red" data-template-name="threat_actor">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+<script type="text/x-red" data-template-name="indicator">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>V
+<script type="text/x-red" data-template-name="course_of_action">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="stix">
+    <p>Description</p>
+</script>
